@@ -8,7 +8,7 @@ const cors = require("cors");
 
 app.use(cors({
     // origin: 'http://localhost:3000',   //for localMachine
-    origin: 'https://eventease18.netlify.app',  //for Production
+    origin: '*',  //for Production
     credentials: true,
 }));
 
