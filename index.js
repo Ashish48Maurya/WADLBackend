@@ -6,9 +6,7 @@ const mongoConnect = require('./db')
 const PORT = 8000 || process.env.PORT;
 const cors = require("cors");
 
-app.use(cors(
-  origin = "https://eventease18.netlify.app/"
-))
+app.use(cors())
 
 app.use(express.json());
 app.use(router); 
