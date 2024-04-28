@@ -6,7 +6,11 @@ const mongoConnect = require('./db')
 const PORT = 8000 || process.env.PORT;
 const cors = require("cors");
 
-app.use(cors())
+app.use(cors({
+    // origin: 'http://localhost:3000',   //for localMachine
+    origin: 'https://eventease18.netlify.app',  //for Production
+    credentials: true,
+}));
 
 app.use(express.json());
 app.use(router); 
