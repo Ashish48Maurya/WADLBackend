@@ -67,7 +67,7 @@ router.post('/permission', authMiddleware(), upload.single('file'), async (req, 
             from: process.env.GMAIL,
             to: permissionFromArray,
             title: "Permission For Conducting Event",
-            subject: `http://localhost:3000/private/event/${event._id}`
+            subject: `https://eventease18.netlify.app/private/event/${event._id}`
         });
 
         await event.save();
